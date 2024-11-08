@@ -5,4 +5,4 @@ const typewriter = new Typewriter(h1, {
   delay: 75,
 });
 
-typewriter.typeString("Développeur Web").pauseFor(2000).deleteAll().start();
+typewriter.start().typeString("Developpeur Web !").pauseFor(2000).deleteAll;

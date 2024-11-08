@@ -16,7 +16,7 @@ renderer.shadowMap.enabled = true;
 document.getElementById("background-scene").appendChild(renderer.domElement);
 
 renderer.domElement.style.width = "100%";
-renderer.domElement.style.height = "100%";
+renderer.domElement.style.height = "100vh";
 
 const pointLight = new THREE.PointLight(0xffffff, 2, 2000);
 pointLight.position.set(0, 200, 300);

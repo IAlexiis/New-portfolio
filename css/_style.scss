@@ -21,6 +21,13 @@ body {
 
 /* MAIN */
 
+#three-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
 #accueil {
   width: 80%;
   height: 60%;
