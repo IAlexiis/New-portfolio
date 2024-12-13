@@ -5,10 +5,11 @@ window.addEventListener("load", function () {
 
     if (loader) {
       loader.classList.add("hide");
+
       loader.addEventListener("transitionend", function () {
         loader.style.display = "none";
         content.classList.add("visible");
       });
     }
-  }, 3000);
+  }, 1000);
 });

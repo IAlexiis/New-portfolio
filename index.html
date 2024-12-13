@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portefolio - Alexis Marin</title>
+
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/properties.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nca5tog.css" />
+    <link href="node_modules/aos/dist/aos.css" rel="stylesheet" />
   </head>
-  <body class="no-scroll">
+  <body>
+    <!-- CECI EST LE LOADER -->
     <div class="loader-overlay">
       <div class="loader"></div>
     </div>
+    <!-- CECI EST LE LOADER -->
+
+    <!-- HEADER -->
     <header>
       <div class="header_div">
-        <a href="http://">Me découvrir</a>
-        <a href="http://">Mes projets</a>
+        <a href="#mes-competences">Me découvrir</a>
+        <a href="#projet">Mes projets</a>
       </div>
       <img src="./Images/logo.png" alt="" />
       <div class="header_div">
@@ -21,12 +29,13 @@
         <a href="http://">S'amuser</a>
       </div>
     </header>
-
-    <div id="background-scene"></div>
+    <!-- HEADER -->
 
     <main>
-      <div id="three-container">
-        <section id="accueil">
+      <!-- SCTION HERO -->
+      <section id="hero-section">
+        <div id="background-vanta"></div>
+        <div id="accueil" class="reveal">
           <div class="info">
             <h1 id="typewritter-1">Développeur Web</h1>
             <h3>
@@ -36,27 +45,143 @@
               Bienvenue sur mon site portefolio ! Vous pouvez découvrir mon
               travail, mon parcours et me contacter si besoin.
             </p>
-            <button>Me découvrir</button>
+            <a href="#mes-competences"><button>Me découvrir</button></a>
           </div>
           <img src="./Images/IMG_3809.jpg" alt="" />
-        </section>
-      </div>
-
-      <section class="next">
-        <section class="projet">
-          <div class="projet-container">
-            <h1>test</h1>
-          </div>
-        </section>
-        <section class="a-propos"></section>
-        <section class="contact"></section>
-        <section class="jeu"></section>
+        </div>
       </section>
+      <!-- SCTION HERO -->
+
+      <!-- SECTION A PROPOS DE MOI -->
+      <section id="mes-competences" class="reveal-left">
+        <div class="info-competences">
+          <h2>Voici mes compétences principales</h2>
+          <p>Que je pourrais appliquer pour vos projets !</p>
+        </div>
+        <div class="section-card">
+          <div class="groupe-card">
+            <div class="competence-card">
+              <img class="sass" src="/Images/SASS.png" alt="" />
+            </div>
+            <div class="titre-competence">
+              <h4>Intégration Web</h4>
+              <p>Html, Scss</p>
+            </div>
+          </div>
+          <div class="groupe-card">
+            <div class="competence-card">
+              <img class="js" src="/Images/JS.webp" alt="" />
+            </div>
+            <div class="titre-competence">
+              <h4>Développement Front</h4>
+              <p>JavaScript</p>
+            </div>
+          </div>
+          <div class="groupe-card">
+            <div class="competence-card">
+              <img class="react" src="/Images/REACT.png" alt="" />
+            </div>
+            <div class="titre-competence">
+              <h4>Apprentissage de Frameworks</h4>
+              <p>React</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION A PROPOS DE MOI -->
+
+      <!-- SECTION MES PROJETS -->
+      <section id="projet" class="reveal-right">
+        <div class="gap-perso">
+          <div class="info-projet">
+            <h2>Voici mes projets</h2>
+            <p>Découvrez ce que je sais faire en toute simplicité</p>
+          </div>
+          <div class="projet-card">
+            <div class="text-projet">
+              <h3>Transformer du design en code est ma passion !</h3>
+              <a href="#grid-projet"><button>Découvrir mes projets</button></a>
+            </div>
+            <video
+              src="/Images/Drg6Y9jvvBaet32zzh8OGWHlXE.mp4"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
+        </div>
+        <div id="grid-projet" class="grid-projet">
+          <div class="card-projet">
+            <img class="blur" src="/Images/Site meteo.png" alt="" />
+            <button class="button-anime">Découvrir le projet</button>
+          </div>
+          <div class="card-projet">
+            <img class="blur" src="/Images/Site todolist.png" alt="" />
+            <button class="button-anime">Découvrir le projet</button>
+          </div>
+          <div class="card-projet">
+            <img class="blur" src="/Images/Screen.webp" alt="" />
+            <button class="button-anime">Découvrir le projet</button>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION MES PROJETS -->
+
+      <section id="faq" class="reveal-right">
+        <div class="gap-perso">
+          <h2>Des questions ?</h2>
+          <p>Cette FAQ vous permet d'en apprendre plus sur moi !</p>
+        </div>
+        <div class="faq-container">
+          <div class="question-container">
+            <div class="question-colonne">
+              <p class="plus">+</p>
+              <p>Qui suis-je et pourquoi ai-je créé ce site ?</p>
+            </div>
+          </div>
+          <div class="question-container">
+            <div class="question-colonne">
+              <p class="plus">+</p>
+              <p>
+                Quelles compétences et technologies ai-je utilisées pour
+                développer ce site ?
+              </p>
+            </div>
+          </div>
+          <div class="question-container">
+            <div class="question-colonne">
+              <p class="plus">+</p>
+              <p>
+                Puis-je vous embaucher pour un projet de développement web ?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION ME CONTACTER -->
+      <section id="contact" class="reveal-right">
+        <div class="gap-perso">
+          <h2>Souhaitez-vous me contacter ?</h2>
+          <p>Veuillez remplir le formulaire ci-dessous !</p>
+        </div>
+      </section>
+      <!-- SECTION ME CONTACTER -->
+
+      <!-- SEECTION JEU -->
+      <section class="jeu"></section>
+      <!-- SEECTION JEU -->
     </main>
 
+    <!-- FOOTER -->
     <footer></footer>
+    <!-- FOOTER -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta/dist/vanta.birds.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@latest/dist/core.js"></script>
-    <script type="module" src="./js/three.js"></script>
     <script src="./js/typewritter.js"></script>
     <script src="./js/loader.js"></script>
     <script src="./js/script.js"></script>

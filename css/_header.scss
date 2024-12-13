@@ -9,14 +9,13 @@ header {
   gap: 5%;
   width: 100%;
   align-items: center;
-  background-color: $background;
-  border-bottom: solid 2px white;
   z-index: 1;
   width: 55%;
   height: 14%;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2),
     0 6px 20px rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(50px);
 
   img {
     width: 125px;
