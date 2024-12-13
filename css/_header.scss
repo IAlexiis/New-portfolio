@@ -29,11 +29,14 @@ header {
   }
 
   a {
-    text-decoration: none;
-    color: $text_color;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #636363);
+    background-clip: text;
     position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 16px;
+    transition: ease 0.3s all;
 
     &:hover {
       transform: scale(1.1);
@@ -44,7 +47,7 @@ header {
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: $text_color;
+      background: linear-gradient(90deg, #ffffff, #636363);
       left: 0;
       bottom: -5px;
       transform: scaleX(0);
