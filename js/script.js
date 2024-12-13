@@ -25,12 +25,13 @@ ScrollReveal().reveal(".reveal", {
   duration: 1000,
   origin: "bottom",
   distance: "100px",
+  easing: "ease-in-out",
 });
 
 ScrollReveal().reveal(".reveal-left", {
   duration: 1000,
   origin: "left",
-  distance: "100px",
+  distance: "400px",
   easing: "ease-in-out",
 });
 
