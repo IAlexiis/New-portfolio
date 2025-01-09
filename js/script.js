@@ -42,22 +42,6 @@ ScrollReveal().reveal(".reveal-right", {
   easing: "ease-in-out",
 });
 
-const buttons = document.querySelectorAll(".button-anime");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const card = button.closest(".card-projet");
-    if (card) {
-      const img = card.querySelector(".blur");
-      if (img) {
-        img.style.filter = "blur(0px)";
-      }
-
-      button.style.display = "none";
-    }
-  });
-});
-
 const questionContainers = document.querySelectorAll(".question-container");
 
 const reponses = [
@@ -71,22 +55,19 @@ questionContainers.forEach(function (questionContainer, index) {
     const existingParagraph = questionContainer.querySelector(".reponse");
 
     if (existingParagraph) {
-      existingParagraph.classList.remove("reponse-visible");
+      existingParagraph.classList.add("suppression");
+      questionContainer.classList.remove("open");
 
       setTimeout(() => {
         questionContainer.removeChild(existingParagraph);
-      }, 300);
+      }, 500);
     } else {
       const nouveauParagraphe = document.createElement("p");
       nouveauParagraphe.classList.add("reponse");
+      questionContainer.classList.add("open");
 
       nouveauParagraphe.textContent = reponses[index];
-
       questionContainer.appendChild(nouveauParagraphe);
-
-      setTimeout(() => {
-        nouveauParagraphe.classList.add("reponse-visible");
-      }, 10);
     }
   });
 });

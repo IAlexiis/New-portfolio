@@ -16,6 +16,7 @@ header {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2),
     0 6px 20px rgba(255, 255, 255, 0.19);
   backdrop-filter: blur(50px);
+  mix-blend-mode: difference;
 
   img {
     width: 125px;

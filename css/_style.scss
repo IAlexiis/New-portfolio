@@ -296,29 +296,32 @@ body {
     }
   }
 
-  .info-card {
+  .columnCard {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    gap: 40px;
 
-    h4 {
-      font-size: 25px;
-      background: linear-gradient(90deg, #ffffff, #636363);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .secondButton {
+      width: 180px;
+      height: 50px;
+      border-radius: 20px;
+      color: white;
+      border: solid 2px white;
+      background: transparent;
+      transition: all 0.3s ease;
       font-weight: bold;
-      width: 70%;
-    }
+      font-size: 15px;
+      transition: ease 0.3s all;
 
-    p {
-      font-size: 20px;
-      background: linear-gradient(90deg, #ffffff, #636363);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      width: 70%;
+      &:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        border: solid 2px black;
+        font-weight: bold;
+        font-size: 15px;
+      }
     }
   }
 
@@ -417,6 +420,31 @@ body {
     opacity: 0.5;
   }
 
+  .card-projet::after,
+  .card-projet::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 2px;
+    border-radius: 24px;
+    background-image: conic-gradient(
+      from var(--angle),
+      transparent 90%,
+      rgb(255, 255, 255)
+    );
+    animation: spin 5s linear infinite;
+  }
+
+  .card-projet::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+
   @keyframes spin {
     from {
       --angle: 0deg;
@@ -438,37 +466,19 @@ body {
       display: flex;
       width: 350px;
       height: 500px;
-      background: linear-gradient(to bottom, #161616, #000000);
       border-radius: 24px;
       position: relative;
       align-items: center;
       justify-content: center;
       z-index: -2;
       transition: ease 0.3s all;
-
-      button {
-        width: 200px;
-        height: 55px;
-        border-radius: 20px;
-        color: white;
-        border: solid 2px white;
-        background: black;
-        transition: all 0.3s ease;
-        font-weight: bold;
-        font-size: 13px;
-        z-index: 1;
-        animation: bouttonAnimation 1s infinite;
-
-        &:hover {
-          transform: translatey(-5px);
-          background-color: rgb(255, 255, 255);
-          color: black;
-          cursor: pointer;
-          border: solid 2px black;
-          font-weight: bold;
-          font-size: 13px;
-        }
-      }
+      border: 2px solid white;
+      transition: ease 0.3s all;
+      border-top: solid rgb(67, 67, 67) 1px;
+      border-right: solid rgb(67, 67, 67) 1px;
+      border-left: solid rgb(67, 67, 67) 1px;
+      border-bottom: solid rgb(67, 67, 67) 1px;
+      padding: 30px;
 
       img {
         width: 100%;
@@ -476,21 +486,6 @@ body {
         object-fit: cover;
         border-radius: 24px;
         position: absolute;
-        z-index: -1;
-        filter: blur(3px);
-        transition: ease 0.3s all;
-      }
-
-      @keyframes bouttonAnimation {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0);
-        }
       }
     }
   }
@@ -548,13 +543,27 @@ body {
       cursor: pointer;
       flex-direction: column;
       transition: ease 0.3s all;
-      gap: 25px;
+      &,
+      &:has(> .reponse.suppression) {
+        gap: 0;
+      }
+      &:has(> .reponse) {
+        gap: 25px;
+      }
+
+      @keyframes entrance {
+        from {
+          max-height: 0;
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+          max-height: 150px;
+        }
+      }
 
       .reponse {
-        opacity: 0;
-        max-height: 0;
         overflow: hidden;
-        transition: opacity 0.3s ease, max-height 0.3s ease;
         font-size: 16px;
         background: gray;
         background-clip: text;
@@ -562,16 +571,16 @@ body {
         display: flex;
         justify-content: start;
         padding-left: 45px;
-      }
 
-      .reponse-visible {
         opacity: 1;
-        max-height: 1000px;
-        font-size: 16px;
-        background: gray;
-        background-clip: text;
-        font-weight: bold;
-        padding-left: 45px;
+        max-height: 150px;
+
+        animation: entrance 0.25s ease-in-out;
+        &.suppression {
+          max-height: 0 !important;
+          opacity: 0 !important;
+          transition: 0.25s;
+        }
       }
 
       .question-colonne {
@@ -592,6 +601,12 @@ body {
 
       .plus {
         font-size: 30px;
+        rotate: 0;
+        transition: 0.25s;
+      }
+
+      &.open .plus {
+        rotate: 45deg;
       }
     }
   }
