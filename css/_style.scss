@@ -299,7 +299,19 @@ body {
   .columnCard {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+
+    .projetTechno {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .projetTechnoGap {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
 
     .secondButton {
       width: 180px;
@@ -322,6 +334,26 @@ body {
         font-weight: bold;
         font-size: 15px;
       }
+    }
+    h3 {
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffffff, #636363);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 25px;
+      text-shadow: 0 0 54px rgba(202, 228, 225, 0.7);
+      width: 100%;
+    }
+
+    p {
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffffff, #636363);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 18px;
+      text-shadow: 0 0 54px rgba(202, 228, 225, 0.7);
     }
   }
 
