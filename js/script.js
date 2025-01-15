@@ -38,7 +38,7 @@ ScrollReveal().reveal(".reveal-left", {
 ScrollReveal().reveal(".reveal-right", {
   duration: 1000,
   origin: "right",
-  distance: "100px",
+  distance: "400px",
   easing: "ease-in-out",
 });
 
