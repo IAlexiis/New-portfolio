@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portefolio - Alexis Marin</title>
-
+    
+    <link rel="icon" href="Images/logo.png" type="image/png">
     <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="stylesheet" href="./css/properties.css" />
     <link rel="stylesheet" href="https://use.typekit.net/nca5tog.css" />
@@ -35,7 +36,7 @@
       <!-- SCTION HERO -->
       <section id="hero-section">
         <div id="background-vanta"></div>
-        <div id="accueil" class="reveal">
+        <div id="accueil">
           <div class="info">
             <h1 id="typewritter-1">Développeur Web</h1>
             <h3>
@@ -111,8 +112,8 @@
             ></video>
           </div>
         </div>
-        <div id="grid-projet" class="grid-projet">
-          <div class="columnCard">
+        <div id="grid-projet">
+          <div class="columnCard reveal-left">
             <div class="card-projet">
               <img class="blur" src="/Images/Mockup-meteo.png" alt="" />
             </div>
@@ -125,7 +126,7 @@
             </div>
             <a href=""><button class="secondButton">Voir plus</button></a>
           </div>
-          <div class="columnCard">
+          <div class="columnCard reveal">
             <div class="card-projet">
               <img class="blur" src="/Images/Mockup-todo.png" alt="" />
             </div>
@@ -138,7 +139,7 @@
             </div>
             <a href=""><button class="secondButton">Voir plus</button></a>
           </div>
-          <div class="columnCard">
+          <div class="columnCard reveal-right">
             <div class="card-projet">
               <img class="blur" src="/Images/Mockup-Simon.png" alt="" />
             </div>
@@ -155,19 +156,20 @@
       </section>
       <!-- SECTION MES PROJETS -->
 
-      <section id="faq" class="reveal-right">
+      <!-- SECTION FAQ -->
+      <section id="faq" class="reveal-left">
         <div class="gap-perso">
           <h2>Des questions ?</h2>
           <p>Cette FAQ vous permet d'en apprendre plus sur moi !</p>
         </div>
         <div class="faq-container">
-          <div class="question-container">
+          <div class="question-container reveal-left">
             <div class="question-colonne">
               <p class="plus">+</p>
               <p>Qui suis-je et pourquoi ai-je créé ce site ?</p>
             </div>
           </div>
-          <div class="question-container">
+          <div class="question-container reveal-late-un">
             <div class="question-colonne">
               <p class="plus">+</p>
               <p>
@@ -176,7 +178,7 @@
               </p>
             </div>
           </div>
-          <div class="question-container">
+          <div class="question-container reveal-late-deux">
             <div class="question-colonne">
               <p class="plus">+</p>
               <p>
@@ -186,6 +188,7 @@
           </div>
         </div>
       </section>
+      <!-- SECTION FAQ -->
 
       <!-- SECTION ME CONTACTER -->
       <section id="contact" class="reveal-right">
@@ -216,11 +219,22 @@
       <!-- SEECTION JEU -->
       <section class="jeu"></section>
       <!-- SEECTION JEU -->
+
+      <!-- FOOTER -->
+      <footer class="reveal-bottom">
+        <div class="footerContainer">
+          <div class="imgContainerLinkdin">
+            <a href="https://www.linkedin.com/in/alexis-marin-d%C3%A9veloppement-web/" target="_blank"><img src="/Images/linkedin.png" alt="" />
+            </div></a>
+
+          <div class="imgContainerGithub">
+           <a href="https://github.com/IAlexiis" target="_blank"><img src="/Images/github.png" alt="" /></a> 
+          </div>
+        </div>
+      </footer>
+      <!-- FOOTER -->
     </main>
 
-    <!-- FOOTER -->
-    <footer></footer>
-    <!-- FOOTER -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>

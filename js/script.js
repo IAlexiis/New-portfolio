@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ScrollReveal().reveal(".reveal", {
   duration: 1000,
-  origin: "bottom",
-  distance: "100px",
+  origin: "top",
+  distance: "200px",
   easing: "ease-in-out",
 });
 
@@ -39,6 +39,27 @@ ScrollReveal().reveal(".reveal-right", {
   duration: 1000,
   origin: "right",
   distance: "100px",
+  easing: "ease-in-out",
+});
+
+ScrollReveal().reveal(".reveal-bottom", {
+  duration: 1000,
+  origin: "bottom",
+  distance: "100px",
+  easing: "ease-in-out",
+});
+
+ScrollReveal().reveal(".reveal-late-un", {
+  duration: 1300,
+  origin: "left",
+  distance: "200px",
+  easing: "ease-in-out",
+});
+
+ScrollReveal().reveal(".reveal-late-deux", {
+  duration: 1600,
+  origin: "left",
+  distance: "200px",
   easing: "ease-in-out",
 });
 
