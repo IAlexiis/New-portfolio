@@ -726,7 +726,7 @@ body {
     background-color: white;
     width: 0%;
     height: 100%;
-    transition: ease all 1s;
+    transition: ease all 0.5s;
     border-radius: 16px;
     z-index: -1;
   }
@@ -741,7 +741,7 @@ body {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    opacity: 30%;
+    opacity: 50%;
     filter: blur(20px);
     z-index: -1;
   }
@@ -1050,13 +1050,9 @@ body {
         height: 400px;
 
         button {
-          width: 180px;
+          width: 100px;
           height: 50px;
-          font-size: 12px;
-        }
-
-        img {
-          filter: blur(2px);
+          font-size: 10px;
         }
       }
     }
@@ -1096,10 +1092,13 @@ body {
 @media (max-width: 480px) {
   /* MAIN */
   #hero-section {
-    padding: 10px;
+    padding: 10px 0px 50px 0px;
+    margin-top: 100px;
+    overflow: hidden;
 
     #accueil {
       padding: 20px;
+      gap: 30px;
 
       h1 {
         font-size: 25px;
@@ -1123,7 +1122,8 @@ body {
         padding-left: 0;
 
         button {
-          width: 100%;
+          width: 60%;
+          height: 40px;
           font-size: 12px;
         }
       }
@@ -1134,7 +1134,9 @@ body {
     padding: 30px 15px;
     .info-competences {
       h2 {
-        font-size: 35px;
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
       }
 
       p {
@@ -1143,6 +1145,9 @@ body {
     }
 
     .section-card {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
       .groupe-card {
         .react,
         .js,
@@ -1163,21 +1168,21 @@ body {
       }
 
       #competence-card {
-        width: 100%;
+        width: 300px;
         height: 150px;
       }
     }
   }
 
   #projet {
-    padding: 40px 10px;
+    padding: 40px 30px 15px 30px;
     .gap-perso {
       gap: 30px;
     }
 
     .info-projet {
       h2 {
-        font-size: 35px;
+        font-size: 25px;
       }
 
       p {
@@ -1191,64 +1196,160 @@ body {
       padding: 10px;
 
       .text-projet {
+        gap: 35px;
         h3 {
-          font-size: 25px;
+          font-size: 20px;
+          width: 80%;
         }
 
         button {
-          width: 140px;
+          width: 170px;
           height: 40px;
-          font-size: 12px;
+          font-size: 10px;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     }
 
     #grid-projet {
-      gap: 20px;
+      gap: 30px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
       .card-projet {
         width: 100%;
         height: 300px;
+      }
 
-        button {
-          width: 150px;
-          height: 40px;
-          font-size: 11px;
+      .columnCard {
+        gap: 20px;
+      }
+
+      .secondButton {
+        width: 150px;
+        height: 40px;
+        font-size: 11px;
+      }
+
+      .projetTechnoGap {
+        h3 {
+          font-size: 22px;
         }
 
-        img {
-          filter: blur(2px);
+        p {
+          font-size: 14px;
         }
       }
     }
   }
 
   #faq {
-    padding: 40px 10px;
+    padding: 80px 15px 15px 15px;
+    gap: 40px;
 
     .gap-perso {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       h2 {
-        font-size: 30px;
+        font-size: 25px;
       }
 
+      p {
+        font-size: 16px;
+        width: 70%;
+        text-align: center;
+      }
+    }
+
+    .faq-container {
+      gap: 40px;
+      .question-container {
+        width: 85%;
+        padding: 15px;
+        gap: 15px;
+
+        p {
+          font-size: 12.5px;
+          text-align: left;
+        }
+
+        .plus {
+          font-size: 20px;
+        }
+
+        .reponse {
+          font-size: 12.5px;
+          text-align: left;
+        }
+      }
+      .question-container.open {
+        gap: 10px;
+      }
+    }
+  }
+
+  #reassurance {
+    padding: 40px 15px 15px 15px;
+
+    h2 {
+      font-size: 19px;
+      width: 85%;
+    }
+
+    h3 {
+      font-size: 14px;
+      width: 85%;
+    }
+
+    .styleButton {
+      width: 150px;
+    }
+
+    button {
+      width: 120px;
+      font-size: 12px;
+    }
+  }
+
+  #contact {
+    padding: 40px 15px 15px 15px;
+    gap: 50px;
+
+    .gap-perso {
+      text-align: center;
+      align-items: center;
+      h2 {
+        font-size: 25px;
+        width: 95%;
+      }
       p {
         font-size: 16px;
       }
     }
 
-    .faq-container {
-      .question-container {
-        width: 100%;
-        padding: 15px;
-        gap: 15px;
+    form {
+      width: 85%;
 
-        p {
-          font-size: 18px;
-        }
+      .message {
+        width: 105%;
+      }
 
-        .plus {
-          font-size: 22px;
-        }
+      label {
+        display: flex;
+        align-items: center;
+      }
+
+      input {
+        width: 105%;
+      }
+
+      button {
+        width: 140px;
+        font-size: 12px;
       }
     }
   }

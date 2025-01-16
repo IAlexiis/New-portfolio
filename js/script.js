@@ -92,3 +92,10 @@ questionContainers.forEach(function (questionContainer, index) {
     }
   });
 });
+
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".lien");
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});

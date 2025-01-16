@@ -84,3 +84,12 @@ footer {
     }
   }
 }
+
+@media (max-width: 480px) {
+  footer {
+    margin-bottom: 200px;
+    .footerContainer {
+      width: 60%;
+    }
+  }
+}
