@@ -1313,8 +1313,20 @@ body {
     button {
       width: 120px;
       font-size: 14px;
-      background: transparent;
+      height: 50px;
+      border-radius: 16px;
       color: white;
+      border: solid 1px #434343;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      transition: ease 0.3s all;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(4px);
+      background: transparent;
+      overflow: hidden;
     }
   }
 
