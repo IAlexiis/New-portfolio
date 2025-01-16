@@ -681,6 +681,10 @@ body {
     background-clip: text;
   }
 
+  a {
+    text-decoration: none !important;
+  }
+
   .styleButton {
     width: 170px;
     height: 70px;
